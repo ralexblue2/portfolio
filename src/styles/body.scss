@@ -1,0 +1,16 @@
+.wholeBody{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: grey;
+    position: absolute;
+    z-index: -1;
+    .table{
+        width: 80%;
+        height: 70%;
+        position: absolute;
+        z-index: 1;
+        background-color:brown;
+        margin: 8%;
+    }
+}

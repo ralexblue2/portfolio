@@ -1,0 +1,22 @@
+.footerBody{
+    background-color: orange;
+    position: absolute;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    height: 132px;
+    width: 100%;
+    max-width: 100%;
+    .cardHolderBody{
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .footerBody{
+        .cardHolderBody{
+            margin-left: 15%;
+        }
+
+    }
+}
