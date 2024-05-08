@@ -4,6 +4,7 @@ import './styles/App.scss';
 import { Footer } from './footer/footer'
 import { Header } from './header/header'
 import { Body } from './body/body'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   //header
