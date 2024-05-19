@@ -12,12 +12,60 @@
     background-color: lightgray;
 }
 
+// First card
+@keyframes card1HoverOut  {
+    from {
+        left: 100px;
+        top: 100px;   
+    }
+    to {
+        left: 80px;
+        top: 60px;
+    }
+}
+@keyframes firstCard1HoverIn  {
+    from {
+        left: 80px;
+        top: 60px;
+        opacity:0;
+    }
+    to {
+        left: 100px;
+        top: 100px;   
+        opacity:1;
+    }
+}
+@keyframes card1HoverIn  {
+    from {
+        left: 80px;
+        top: 60px;
+    }
+    to {
+        left: 100px;
+        top: 100px;   
+    }
+}
+
 .playingCardBody:nth-child(1) {
     transform: rotate(-25deg);
     position: relative;
     left: 100px;
     top: 100px;
+    -webkit-animation-name: firstCard1HoverIn;
+    -webkit-animation-duration: 1s;
 }
+
+.playingCardBody.alreadyHovered:nth-child(1){
+    -webkit-animation-name: card1HoverIn;
+}
+
+.playingCardBody:nth-child(1):hover {
+  -webkit-animation-name: card1HoverOut;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+}
+// second card
+
 
 .playingCardBody:nth-child(2) {
     transform: rotate(-12deg);
@@ -26,17 +74,27 @@
     top: 50px;
 }
 
+
+
+
+// Third card
 .playingCardBody:nth-child(3) {
     position: relative;
     left: 0px;
     top: 36px;
 }
+
+// Fourth card
+
+
 .playingCardBody:nth-child(4) {
     transform: rotate(12deg);
     position: relative;
     left: -45px;
     top: 50px;
 }
+// Fifth Card
+
 .playingCardBody:nth-child(5) {
     transform: rotate(25deg);
     position: relative;
