@@ -12,21 +12,24 @@ type playingCardProps = {
   value?: string;
   onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   cardNumber?:number;
+  isActive?:number;
+  IsActiveIn?:number;
+  onClick ?: any;    
 };
 
-export const PlayingCard = ({ label, value,  onChange, cardNumber }: playingCardProps) => {
-  let onCLick = () =>{
-    console.log("clicked me lol")
-  }
+export const PlayingCard = ({ label, value,  onChange, cardNumber, IsActiveIn, isActive, onClick }: playingCardProps) => {
+
   const [isHovered, setIsHovered] = useState(false);
 
   const playingCardClass = classNames({
 		playingCardBody: true,
-		'alreadyHovered': isHovered,
+		'alreadyHovered': isHovered && isActive !== cardNumber,
+    'isActive': isActive == cardNumber,
+    'isActiveIn': IsActiveIn == cardNumber,
 	});
 
   return (
-    <div className={playingCardClass} onClick={onCLick} onMouseEnter={() => setIsHovered(true)}>
+    <div className={playingCardClass} onClick={()=>onClick(cardNumber)} onMouseEnter={() => setIsHovered(true)}>
       <div className="playingCardHeader">{label}</div>
       <div className='playingCardBodyMode'></div>
     </div>

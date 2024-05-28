@@ -46,6 +46,29 @@
     }
 }
 
+@keyframes card1ActiveOut  {
+    from {
+        left: 80px;
+        top: 60px;
+    }
+    to {
+        left: 1px;
+        top: -44px;
+        transform: rotate(0deg);
+    }
+}
+@keyframes card1ActiveIn  {
+    from {
+        left: 1px;
+        top: -44px;
+    }
+    to {
+        left: 100px;
+        top: 100px;   
+        transform: rotate(-25deg);
+    }
+}
+
 .playingCardBody:nth-child(1) {
     transform: rotate(-25deg);
     position: relative;
@@ -64,6 +87,20 @@
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
 }
+
+.playingCardBody.isActive:nth-child(1){
+    -webkit-animation-name: card1ActiveOut;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.playingCardBody.isActiveIn:nth-child(1){
+    -webkit-animation-name: card1ActiveIn;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+
 // second card
 @keyframes card2HoverOut  {
     from {
